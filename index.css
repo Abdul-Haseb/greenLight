@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #240d4b;
+  --color-secondary: #aee9b6;
+  --color-custom-purple: #41286c;
+  --color-custom-span: #232323;
+
+  --font-family-sans: "HeroNew", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+@font-face {
+  font-family: "HeroNew";
+  src: url("./fonts/HeroNew/HNregular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "HeroNew";
+  src: url("./fonts/HeroNew/HNmedium.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "HeroNew";
+  src: url("./fonts/HeroNew/HNsemiBold.otf") format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "HeroNew";
+  src: url("./fonts/HeroNew/HNbold.otf") format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "HeroNew";
+  src: url("./fonts/HeroNew/HNextraBold.otf") format("opentype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "HeroNew";
+  src: url("./fonts/HeroNew/HNsuperBold.otf") format("opentype");
+  font-weight: 900;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}

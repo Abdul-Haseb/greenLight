@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Landing Page</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-[105svh] flex flex-col md:flex-row justify-between bg-primary h-full pb-20 lg:pb-0"
+    >
+      <!-- Left Purple Background (on Mobile: Top Half) -->
+      <div class="bg-primary w-full md:w-1/2 h-full"></div>
+
+      <!-- Right Purple Background (on Mobile: Bottom Half) -->
+      <div
+        class="bg-customPurple w-full md:w-[55%] lg:min-w-[50%] xl:min-w-[0%] xl:max-w-[43%] 2xl:max-w-[47%] md:max-h-[85svh] rounded-bl-[36%] lg:max-h-[90svh] 2xl:max-h-[100svh] lg:rounded-bl-[40%] 2xl:rounded-bl-[40%]"
+      ></div>
+
+      <!-- Content On Top (Absolute Layer) -->
+      <div
+        class="relative md:absolute inset-0 flex flex-col px-4 sm:px-6 md:px-8 lg:px-10 2xl:px-[100px] w-full max-w-[1920px] h-full overflow-hidden"
+      >
+        <!-- Navigation Bar -->
+        <nav class="flex items-center justify-between w-full z-10 py-4">
+          <!-- Logo -->
+          <div class="pt-5 sm:pt-6">
+            <img
+              src="/images/logo.svg"
+              alt="Logo"
+              class="w-36 sm:w-48 md:w-64 lg:w-full"
+            />
+          </div>
+
+          <!-- Desktop Menu (hidden on Mobile) -->
+          <div
+            class="hidden lg:flex flex-col items-end justify-between h-[80%] text-white"
+          >
+            <!-- Top Contact Details -->
+            <div class="flex items-center pb-6 gap-4">
+              <div class="text-xs 2xl:text-base">
+                info@greenlight-digital.co.uk
+              </div>
+              <div class="text-xs 2xl:text-base">01234 567 890</div>
+              <div class="flex items-center gap-1">
+                <a
+                  href="#"
+                  class="text-white hover:text-green-400 font-extrabold text-base 2xl:text-[19px]"
+                  >1</a
+                >
+                <a
+                  href="#"
+                  class="text-white hover:text-green-400 font-extrabold text-base 2xl:text-[19px]"
+                  >1</a
+                >
+                <a
+                  href="#"
+                  class="text-white hover:text-green-400 font-extrabold text-base 2xl:text-[19px]"
+                  >1</a
+                >
+              </div>
+            </div>
+
+            <!-- Main Menu Links -->
+            <ul class="flex space-x-6 2xl:space-x-[63px] mt-4 2xl:mt-6">
+              <li>
+                <a
+                  href="#"
+                  class="text-white hover:text-green-400 font-extrabold text-base 2xl:text-[19px]"
+                  >Our Websites</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white hover:text-green-400 font-extrabold text-base 2xl:text-[19px]"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white hover:text-green-400 font-extrabold text-base 2xl:text-[19px]"
+                  >Reviews</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-400 hover:bg-primary font-extrabold text-sm 2xl:text-[19px] py-2 2xl:py-3 px-4 2xl:px-[37px] rounded-[11px] bg-secondary text-primary"
+                >
+                  Talk To Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mobile Hamburger -->
+          <div class="lg:hidden flex items-center">
+            <button id="menu-btn" class="text-white focus:outline-none">
+              <!-- Hamburger Icon -->
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden fixed flex-col space-y-4 bg-primary text-white py-6 px-6 top-0 right-0 w-full md:w-[450px] h-screen z-20"
+        >
+          <div class="flex items-center justify-end">
+            <button
+              id="close-btn"
+              class="text-white text-2xl focus:outline-none"
+            >
+              &#10005;
+            </button>
+          </div>
+          <ul class="flex flex-col gap-6 mt-12">
+            <li>
+              <a href="#" class="hover:text-green-400 font-extrabold text-lg"
+                >Our Websites</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-green-400 font-extrabold text-lg"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-green-400 font-extrabold text-lg"
+                >Reviews</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-green-400 hover:bg-white font-extrabold text-lg py-3 px-8 rounded-[11px] bg-secondary text-primary"
+              >
+                Talk To Us
+              </a>
+            </li>
+          </ul>
+          <!-- Bottom: Contact + Socials -->
+          <div class="p-6 border-t border-gray-700">
+            <!-- Email -->
+            <div class="mb-2 text-sm">info@greenlight-digital.co.uk</div>
+            <!-- Phone -->
+            <div class="mb-4 text-sm">01234 567 890</div>
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3">
+              <a
+                href="#"
+                class="text-white hover:text-green-400 font-extrabold text-base 2xl:text-[19px]"
+                >1</a
+              >
+              <a
+                href="#"
+                class="text-white hover:text-green-400 font-extrabold text-base 2xl:text-[19px]"
+                >1</a
+              >
+              <a
+                href="#"
+                class="text-white hover:text-green-400 font-extrabold text-base 2xl:text-[19px]"
+                >1</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Main Content (Text + Circle Image) -->
+        <div
+          class="flex flex-col md:flex-row items-center justify-between flex-1 mt-10 md:mt-16 w-full"
+        >
+          <!-- Text Content -->
+          <div
+            class="text-white w-full md:max-w-[830px] space-y-6 mt-16 md:mt-32 text-center md:text-left"
+          >
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-[110px] 22xl:text-[131px] font-extrabold whitespace-nowrap"
+            >
+              Ready To Go
+            </h1>
+            <p
+              class="text-green-400 text-lg sm:text-xl 2xl:text-[42px] font-extrabold whitespace-nowrap pb-4 lg:pb-[48px]"
+            >
+              Smart and efficient websites
+            </p>
+            <p
+              class="text-sm sm:text-base md:text-lg text-white max-w-[657px] mx-auto md:mx-0 pb-4"
+            >
+              We specialize in building high-quality, template-based websites
+              that save you time, energy, and money without sacrificing design
+              or functionality.
+            </p>
+            <p class="text-base md:text-xl font-bold pb-6">
+              Talk to us and we’ll get you up and running!
+            </p>
+            <div
+              class="flex flex-col md:flex-row whitespace-nowrap items-center justify-center md:justify-start gap-4"
+            >
+              <button
+                class="hover:text-white hover:bg-primary border-4 border-secondary font-extrabold text-sm sm:text-base 2xl:text-[19px] py-2 px-6 sm:px-[37px] rounded-[11px] bg-secondary text-primary"
+              >
+                Our Websites
+              </button>
+              <button
+                class="hover:text-primary hover:bg-secondary font-extrabold text-sm sm:text-base 2xl:text-[19px] py-2 px-6 sm:px-[37px] rounded-[11px] border-4 border-secondary text-white"
+              >
+                Talk To Us
+              </button>
+            </div>
+            <div
+              class="pt-5 2xl:pt-[100px] flex flex-col sm:flex-row items-center gap-4"
+            >
+              <img
+                src="/images/downArrow.svg"
+                alt=""
+                class="w-6 h-auto md:w-8"
+              />
+              <span class="font-extrabold text-lg sm:text-xl text-white"
+                >Affordable options</span
+              >
+            </div>
+          </div>
+
+          <!-- Circular Phone Image -->
+          <div class="w-full flex justify-center mt-12 md:mt-0">
+            <div
+              class="relative w-[220px] sm:w-[280px] md:w-[350px] lg:w-[400px] 2xl:w-[631px] h-[220px] sm:h-[280px] md:h-[350px] lg:h-[400px] 2xl:h-[631px] rounded-full bg-green-200 flex items-center justify-center overflow-hidden"
+            >
+              <!-- Rotating Text -->
+              <div class="absolute w-full h-full animate-spin-slow">
+                <img
+                  src="/images/rotater-Text.svg"
+                  alt="Rotating Text"
+                  class="w-full h-full"
+                />
+              </div>
+
+              <!-- Hand Holding Phone -->
+              <div class="absolute">
+                <img
+                  src="/images/holdingPhone.svg"
+                  alt="Hand holding phone"
+                  class="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Websites Section -->
+    <section
+      class="mt-[100px] md:mt-[120px] lg:mt-[165px] px-5 md:px-7 lg:px-10 2xl:px-[100px] max-w-[1920px] mx-auto"
+    >
+      <!-- Header Row: contains the "Our Websites" heading, scroll arrows, and 'See More Websites' button -->
+      <div class="flex items-center pb-[50px] md:pb-[70px] lg:pb-[109px]">
+        <!-- Left Side: heading and scroll arrows are grouped together -->
+        <div class="flex gap-2 items-center md:gap-5 w-full">
+          <!-- Main Section Title -->
+          <h2
+            class="font-extrabold text-primary sm:text-[30px] md:text-[40px] 2xl:text-[70px]"
+          >
+            Our Websites
+          </h2>
+
+          <!-- Scroll Arrows: for navigating horizontally through website cards -->
+          <div class="flex items-center gap-2">
+            <img
+              id="scrollLeft"
+              src="/images/iconLeft.svg"
+              alt="Scroll Left"
+              class="cursor-pointer w-[30px] sm:w-[35px] md:w-[40px]"
+            />
+            <img
+              id="scrollRight"
+              src="/images/iconRight.svg"
+              alt="Scroll Right"
+              class="cursor-pointer w-[30px] sm:w-[35px] md:w-[40px]"
+            />
+          </div>
+        </div>
+
+        <!-- Right Side: 'See More Websites' button -->
+        <button
+          class="bg-secondary md:flex md:items-center gap-1 rounded-[11px] whitespace-nowrap py-1.5 px-4 md:py-3 md:px-8 font-extrabold text-sm md:text-[19px] text-[#022221] sm:px-6 sm:py-2 md:px-8 md:py-3"
+        >
+          <!-- On smaller screens just says "See More" -->
+          See More
+          <!-- On medium and larger screens, shows "Websites" next to it -->
+          <span class="hidden md:block">Websites</span>
+        </button>
+      </div>
+
+      <!-- Scrollable Card Section: horizontally scrollable list of website cards -->
+      <div
+        id="websiteCards"
+        class="flex overflow-x-auto whitespace-nowrap gap-4 md:gap-12 px-4 scrollbar"
+      ></div>
+    </section>
+
+    <!-- Getting website steps -->
+    <section
+      class="mt-[70px] md:mt-[100px] lg:mt-[175px] mb-[70px] md:mb-[120px] lg:mb-[200px] max-w-[1920px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-4 2xl:gap-[77px] relative"
+    >
+      <!-- Left side: Image block -->
+      <div
+        class="bg-secondary relative w-full lg:w-1/2 max-h-[800px] rounded-r-[40px] md:rounded-r-[67px] flex items-center justify-center"
+      >
+        <!-- Responsive Image -->
+        <img
+          src="/images/section3-img.png"
+          alt="Mobile device"
+          class="w-auto object-contain"
+        />
+      </div>
+
+      <!-- Right side: Steps block -->
+      <div
+        class="bg-[#F5F5F5] w-full lg:w-1/2 rounded-l-[40px] md:rounded-l-[67px] py-14 pb-20 xl:min-h-[800px] xl:py-[96px] px-6 sm:px-8 2xl:px-[86px] relative overflow-hidden flex flex-col items-center lg:items-start justify-center"
+      >
+        <!-- Heading -->
+        <div class="mb-6 sm:mb-10">
+          <h2
+            class="font-extrabold max-w-[855px] text-primary text-[20px] sm:text-[30px] md:text-[40px] 2xl:text-[70px] leading-[110%] md:leading-[100%] mb-4"
+          >
+            Get your website in
+            <span class="text-[#89D991]">3 easy steps</span>
+          </h2>
+        </div>
+
+        <!-- Steps container -->
+        <div class="">
+          <!-- Step 1: Select -->
+          <div class="flex items-start gap-4 sm:gap-[29px]">
+            <!-- Icon and line -->
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[42px] h-[42px] lg:w-[50px] lg:h-[50px] 2xl:w-[78px] 2xl:h-[78px] rounded-full bg-secondary flex items-center justify-center"
+              >
+                <img src="/images/select.svg" alt="Select icon" />
+              </div>
+              <div
+                class="h-[30px] sm:h-[35px] w-[2px] bg-primary my-[10px] sm:my-[11.5px]"
+              ></div>
+            </div>
+
+            <!-- Text -->
+            <div>
+              <h4
+                class="text-[22px] sm:text-[29px] text-primary font-extrabold"
+              >
+                Select
+              </h4>
+              <p
+                class="text-[16px] sm:text-[19px] text-[#022221] tracking-tighter"
+              >
+                From our library of professional-grade templates,
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2: Customise -->
+          <div class="flex items-start gap-4 sm:gap-[29px]">
+            <!-- Icon and line -->
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] 2xl:w-[78px] 2xl:h-[78px] rounded-full bg-secondary flex items-center justify-center"
+              >
+                <img src="/images/customize.svg" alt="Customize icon" />
+              </div>
+              <div
+                class="h-[30px] sm:h-[35px] w-[2px] bg-primary my-[10px] sm:my-[11.5px]"
+              ></div>
+            </div>
+
+            <!-- Text -->
+            <div>
+              <h4
+                class="text-[22px] sm:text-[29px] text-primary font-extrabold"
+              >
+                Customise
+              </h4>
+              <p
+                class="text-[16px] sm:text-[19px] text-[#022221] tracking-tighter max-w-[450px]"
+              >
+                With brand-specific colors, fonts, and images to make the site
+                uniquely yours.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3: Launch -->
+          <div class="flex items-start gap-4 sm:gap-[29px]">
+            <!-- Icon and L-shape line -->
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[42px] h-[42px] lg:w-[50px] lg:h-[50px] 2xl:w-[78px] 2xl:h-[78px] rounded-full bg-secondary flex items-center justify-center"
+              >
+                <img src="/images/launch.svg" alt="Launch icon" />
+              </div>
+              <div
+                class="w-[30px] sm:w-[35px] h-[52px] lg:h-[65px] 2xl:h-[46px] border-l-2 border-b-2 border-l-primary border-b-primary ml-3 sm:ml-5 my-[10px] sm:my-[11.5px]"
+              ></div>
+            </div>
+
+            <!-- Text and Button -->
+            <div class="relative">
+              <h4
+                class="text-[22px] sm:text-[29px] text-primary font-extrabold"
+              >
+                Launch
+              </h4>
+              <p
+                class="text-[16px] sm:text-[19px] text-[#022221] tracking-tighter mb-2 md:mb-4 lg:mb-3 2xl:mb-9"
+              >
+                A website that’s ready to go live and drive results.
+              </p>
+
+              <a
+                href="#"
+                class="inline-block font-extrabold text-sm 2xl:text-[19px] py-2 2xl:py-3 px-4 2xl:px-[37px] rounded-[11px] text-primary border-[5px] border-secondary text-[#232323] hover:bg-primary hover:text-secondary bg-secondary hover:border-primary"
+              >
+                Talk To Us
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute -bottom-32 lg:-bottom-40 2xl:-bottom-36 -right-36 2xl:-right-10 rotate-[30deg] w-fit"
+        >
+          <img src="/images/bottom.png" alt="" class="w-1/2 2xl:w-3/4" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About  -->
+
+    <section class="max-w-[1920px] mx-auto bg-secondary">
+      <div
+        class="px-5 md:px-7 lg:px-10 py-10 md:pt-[100px] 2xl:pt-[123px md:pb-[60px] 2xl:pb-[73px] 2xl:px-[100px] bg-[url('/images/about-bg.png')] bg-no-repeat bg-cover md:bg-right bg-[length:100%_auto] md:bg-[length:80%_100%] flex items-center justify-start"
+      >
+        <!-- Content box -->
+        <div
+          class="w-full max-w-[824px] bg-white rounded-[30px] sm:rounded-[35px] md:rounded-[40px] 2xl:rounded-[43px] pt-[60px] sm:pt-[70px] md:pt-[80px] 2xl:pt-[101px] px-4 md:px-[70px] 2xl:px-[88px] pb-[60px] sm:pb-[70px] md:pb-[75px] 2xl:pb-[81px]"
+        >
+          <!-- Heading -->
+          <h4
+            class="font-extrabold max-w-[696PX] text-primary text-[24px] sm:text-[28px] md:text-[36px] lg:text-[50px] 2xl:text-[70px] leading-[120%] mb-4"
+          >
+            We’re all about simplicity, speed and results
+          </h4>
+
+          <!-- Paragraph 1 -->
+          <p
+            class="max-w-[573px] text-[14px] sm:text-[16px] md:text-[17px] 2xl:text-[19px] text-[#232323] pb-[18px] md:pb-[20px] 2xl:pb-[22px]"
+          >
+            Our unique approach combines pre-designed templates with
+            customisation options to match your brand’s unique identity. This
+            means you get a beautifully designed, fully responsive, and
+            optimised website faster than ever, with the confidence that
+            everything is crafted with intention and expertise.
+          </p>
+
+          <!-- Paragraph 2 -->
+          <p
+            class="max-w-[573px] text-[14px] sm:text-[16px] md:text-[17px] 2xl:text-[19px] text-[#232323] pb-[36px] md:pb-[46px] 2xl:pb-[56px]"
+          >
+            We’re not just building websites; we’re powering up your online
+            presence so you can focus on what you do best.
+          </p>
+
+          <!-- Buttons -->
+          <div
+            class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4"
+          >
+            <!-- Button 1 -->
+            <button
+              class="hover:text-primary hover:bg-secondary border-4 border-primary hover:border-secondary font-extrabold text-[14px] sm:text-[15px] md:text-[17px] 2xl:text-[19px] py-3 px-6 md:px-[18px] rounded-[10px] 2xl:rounded-[11px] bg-primary text-white"
+            >
+              Find Out More
+            </button>
+
+            <!-- Button 2 -->
+            <button
+              class="hover:bg-secondary text-primary font-extrabold text-[14px] sm:text-[15px] md:text-[17px] 2xl:text-[19px] py-3 px-6 sm:px-8 md:px-9 rounded-[10px] 2xl:rounded-[11px] border-4 border-secondary"
+            >
+              Talk To Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What to Expect Section -->
+    <section
+      class="bg-primary text-secondary pl-5 md:pl-7 lg:pl-10 2xl:pl-[100px] py-10 md:pt-[100px] 2xl:pt-[176px] md:pb-[60px] 2xl:pb-[189px]"
+    >
+      <!-- Section Heading -->
+      <p class="text-[22px] sm:text-[25px] md:text-[29px] text-white mb-8">
+        HERE’S WHAT TO EXPECT:
+      </p>
+
+      <!-- Expectation Cards -->
+      <div class="flex flex-col gap-[35px]">
+        <!-- Card 1 -->
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-12 py-[23px] px-6 sm:px-12 rounded-l-[40px] shadow-2xl bg-primary"
+        >
+          <img
+            src="/images/fast.svg"
+            alt="Fast Icon"
+            class="w-[60px] sm:w-[80px]"
+          />
+          <div>
+            <h5
+              class="text-[22px] sm:text-[28px] md:text-[36px] font-extrabold leading-tight mb-2"
+            >
+              Fast Turnarounds
+            </h5>
+            <p class="text-[18px] sm:text-[20px] text-white">
+              Get your website live in record time without compromising on
+              quality.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-16 py-[23px] px-6 sm:px-12 rounded-l-[40px] shadow-2xl bg-primary"
+        >
+          <img
+            src="/images/affordable.svg"
+            alt="Affordable Icon"
+            class="w-[60px] sm:w-[80px]"
+          />
+          <div>
+            <h5
+              class="text-[22px] sm:text-[28px] md:text-[36px] font-extrabold leading-tight mb-2"
+            >
+              Affordable Options
+            </h5>
+            <p class="text-[18px] sm:text-[20px] text-white">
+              High-end designs at prices that won’t break the bank.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10 py-[23px] px-6 sm:px-12 rounded-l-[40px] shadow-2xl bg-primary"
+        >
+          <img
+            src="/images/clear.svg"
+            alt="Clear Icon"
+            class="w-[60px] sm:w-[80px]"
+          />
+          <div>
+            <h5
+              class="text-[22px] sm:text-[28px] md:text-[36px] font-extrabold leading-tight mb-2"
+            >
+              Clear and Honest Deliverables
+            </h5>
+            <p class="text-[18px] sm:text-[20px] text-white">
+              No jargon, no surprises—just exactly what you need.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Founder Message Section -->
+      <div
+        class="mt-[100px] flex flex-col gap-5 pb-2 lg:flex-row bg-white rounded-[26px] shadow-md overflow-hidden mr-5 md:mr-7 2xl:mr-[100px]"
+      >
+        <!-- Founder Image -->
+        <img
+          src="/images/founder.png"
+          alt="Founder"
+          class="object-contain lg:w-[300px] xl:w-1/2 2xl:w-auto lg:mt-16 xl:mt-0"
+        />
+
+        <!-- Text Content -->
+        <div
+          class="px-4 md:px-10 lg:py-[60px] lg:px-[40px] flex flex-col justify-center"
+        >
+          <div class="lg:-ml-[300px]">
+            <!-- Founder Message Label -->
+            <p
+              class="text-primary text-[20px] sm:text-[22px] md:text-[23px] px-5 py-1 bg-secondary rounded-[9px] w-fit mb-5"
+            >
+              A message from our founder
+            </p>
+
+            <!-- Heading -->
+            <h5
+              class="font-extrabold text-primary max-w-[950px] text-[22px] sm:text-[28px] md:text-[36px] lg:text-[50px] 2xl:text-[70px] leading-[120%] mb-6"
+            >
+              Greenlight was created to fix the pitfalls I’ve seen over my 20
+              year career
+            </h5>
+          </div>
+
+          <!-- Body Text -->
+          <div
+            class="max-w-[630px] text-[#232323] text-[17px] sm:text-[18px] md:text-[19px] flex flex-col gap-[18px]"
+          >
+            <p>
+              When I started this journey, I had one goal in mind: to simplify
+              the process of building high-quality websites for businesses like
+              yours. I’ve seen too many people overwhelmed by complicated tech,
+              overblown costs.
+            </p>
+            <p>
+              At Green Light Digital, we believe every business deserves a
+              professional online presence without the stress. That’s why we
+              focus on speed, affordability, and transparency, delivering
+              websites that not only look amazing but are ready to drive
+              results.
+            </p>
+            <p class="font-bold">
+              Thank you for trusting us with your vision. We’re excited to help
+              you bring it to life!
+            </p>
+
+            <!-- Signature -->
+            <div class="flex items-center gap-4 mt-2">
+              <img src="/images/Daniel.svg" alt="Signature" />
+              <img src="/images/Brown.svg" alt="Name" />
+            </div>
+
+            <!-- Name and CTA -->
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between mt-6 gap-4"
+            >
+              <div>
+                <p class="font-extrabold text-[18px] sm:text-[19px]">
+                  Daniel Brown
+                </p>
+                <p class="text-[17px] sm:text-[19px]">Founder & Director</p>
+              </div>
+              <button
+                class="rounded-[11px] text-white bg-primary py-3 px-[30px] text-[17px] sm:text-[19px]"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What to give by greenLight -->
+    <section
+      class="my-[100px] md:my-[120px] lg:my-[165px] 2xl:my-[198px] lg:mb-[265px] px-5 md:px-7 lg:px-10 2xl:px-[100px] max-w-[1920px] mx-auto"
+    >
+      <!-- Header Row: contains the "Greenlight giving back" heading and the "Find Out More" button -->
+      <div
+        class="flex flex-col xl:flex-row items-start xl:items-center gap-4 xl:gap-0"
+      >
+        <!-- Left Side: heading and paragraph explaining how Greenlight gives back -->
+        <div class="w-full xl:pb-6">
+          <!-- Main Section Title -->
+          <h5
+            class="font-extrabold text-primary text-[22px] sm:text-[28px] md:text-[36px] lg:text-[50px] 2xl:text-[70px] mb-4 xl:mb-0"
+          >
+            Greenlight giving back
+          </h5>
+
+          <!-- Supporting description text for the section -->
+          <p
+            class="max-w-[1059px] text-primary text-[17px] sm:text-[18px] md:text-[19px] lg:text-[25px]"
+          >
+            First and foremost, we are business, but we are also doing our bit
+            to be the good guys! Here’s how we’re supporting the local
+            community.
+          </p>
+        </div>
+
+        <!-- Right Side: "Find Out More" button that leads users to more information -->
+        <button
+          class="bg-primary text-white md:flex md:items-center gap-1 rounded-[11px] whitespace-nowrap py-1.5 px-4 font-extrabold text-sm md:text-[19px] sm:px-4 sm:py-2 mb-4 xl:mb-0 md:px-8 md:py-3"
+        >
+          Find Out More
+        </button>
+      </div>
+
+      <!-- Scrollable Card Section: container that will hold dynamically generated cards using JavaScript -->
+      <div
+        id="greenLightCards"
+        class="flex overflow-x-auto gap-[71px] px-4 scrollbar"
+      ></div>
+    </section>
+
+    <!-- What Our clients say -->
+    <section
+      class="px-5 md:px-7 lg:px-10 2xl:px-[100px] max-w-[1920px] mx-auto"
+    >
+      <!-- Header Row: contains the "Our Websites" heading, scroll arrows, and 'See More Websites' button -->
+      <div class="flex items-center pb-[50px] md:pb-[70px] lg:pb-[109px]">
+        <!-- Left Side: heading and scroll arrows are grouped together -->
+        <div class="flex gap-2 items-center md:gap-5 w-full">
+          <!-- Main Section Title -->
+          <h2
+            class="font-extrabold text-primary sm:text-[30px] md:text-[40px] 2xl:text-[70px]"
+          >
+            What our clients say
+          </h2>
+
+          <!-- Scroll Arrows: for navigating horizontally through website cards -->
+          <div class="flex items-center gap-2">
+            <img
+              id="scrollLeft"
+              src="/images/iconLeft.svg"
+              alt="Scroll Left"
+              class="cursor-pointer w-[30px] sm:w-[35px] md:w-[40px]"
+            />
+            <img
+              id="scrollRight"
+              src="/images/iconRight.svg"
+              alt="Scroll Right"
+              class="cursor-pointer w-[30px] sm:w-[35px] md:w-[40px]"
+            />
+          </div>
+        </div>
+
+        <!-- Right Side: 'See More Websites' button -->
+        <button
+          class="bg-primary text-white md:flex md:items-center gap-1 rounded-[11px] whitespace-nowrap py-1.5 px-4 font-extrabold text-sm md:text-[19px] sm:px-4 sm:py-2 md:px-8 md:py-3"
+        >
+          <!-- On smaller screens just says "See More" -->
+          Read More Reviews
+        </button>
+      </div>
+
+      <!-- Scrollable Card Section: horizontally scrollable list of website cards -->
+      <div
+        id="greenLightCards"
+        class="flex overflow-x-auto gap-[71px] px-4 scrollbar"
+      ></div>
+    </section>
+    <script src="/JavaScript/Others.js"></script>
+  </body>
+</html>
