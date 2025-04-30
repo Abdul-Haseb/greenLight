@@ -147,28 +147,28 @@
           <ul class="flex flex-col gap-6 mt-12">
             <li>
               <a
-                href="#"
+                href="#websites"
                 class="hover:text-green-400 font-extrabold text-lg mobile-link"
                 >Our Websites</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#about"
                 class="hover:text-green-400 font-extrabold text-lg mobile-link"
                 >About Us</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#testimonials"
                 class="hover:text-green-400 font-extrabold text-lg mobile-link"
                 >Reviews</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#contact"
                 class="hover:text-green-400 hover:bg-white font-extrabold text-lg py-3 px-8 rounded-[11px] bg-secondary text-primary mobile-link"
               >
                 Talk To Us
@@ -239,16 +239,20 @@
             <div
               class="flex flex-col md:flex-row whitespace-nowrap items-center justify-center md:justify-start gap-4"
             >
-              <button
-                class="hover:text-white hover:bg-primary border-4 border-secondary font-extrabold text-sm sm:text-base 2xl:text-[19px] py-2 px-6 sm:px-[37px] rounded-[11px] bg-secondary text-primary"
-              >
-                Our Websites
-              </button>
-              <button
-                class="hover:text-primary hover:bg-secondary font-extrabold text-sm sm:text-base 2xl:text-[19px] py-2 px-6 sm:px-[37px] rounded-[11px] border-4 border-secondary text-white"
-              >
-                Talk To Us
-              </button>
+              <a href="#websites">
+                <button
+                  class="hover:text-white cursor-pointer hover:bg-primary border-4 border-secondary font-extrabold text-sm sm:text-base 2xl:text-[19px] py-2 px-6 sm:px-[37px] rounded-[11px] bg-secondary text-primary"
+                >
+                  Our Websites
+                </button>
+              </a>
+              <a href="#contact">
+                <button
+                  class="hover:text-primary cursor-pointer hover:bg-secondary font-extrabold text-sm sm:text-base 2xl:text-[19px] py-2 px-6 sm:px-[37px] rounded-[11px] border-4 border-secondary text-white"
+                >
+                  Talk To Us
+                </button>
+              </a>
             </div>
             <div
               class="pt-5 2xl:pt-[100px] flex flex-col sm:flex-row items-center gap-4"
@@ -366,7 +370,7 @@
         <!-- Heading -->
         <div class="mb-6 sm:mb-10">
           <h2
-            class="font-extrabold max-w-[855px] text-primary text-[20px] sm:text-[30px] md:text-[40px] 2xl:text-[70px] leading-[110%] md:leading-[100%] mb-4"
+            class="font-extrabold max-w-[650px] text-primary text-[20px] sm:text-[30px] md:text-[40px] 2xl:text-[70px] leading-[110%] md:leading-[100%] mb-4"
           >
             Get your website in
             <span class="text-[#89D991]">3 easy steps</span>
@@ -462,7 +466,7 @@
               </p>
 
               <a
-                href="#"
+                href="#contact"
                 class="inline-block font-extrabold text-sm 2xl:text-[19px] py-2 2xl:py-3 px-4 2xl:px-[37px] rounded-[11px] text-primary border-[5px] border-secondary text-[#232323] hover:bg-primary hover:text-secondary bg-secondary hover:border-primary"
               >
                 Talk To Us
@@ -526,11 +530,13 @@
             </button>
 
             <!-- Button 2 -->
-            <button
-              class="hover:bg-secondary text-primary font-extrabold text-[14px] sm:text-[15px] md:text-[17px] 2xl:text-[19px] py-3 px-6 sm:px-8 md:px-9 rounded-[10px] 2xl:rounded-[11px] border-4 border-secondary"
-            >
-              Talk To Us
-            </button>
+            <a href="#contact">
+              <button
+                class="hover:bg-secondary cursor-pointer text-primary font-extrabold text-[14px] sm:text-[15px] md:text-[17px] 2xl:text-[19px] py-3 px-6 sm:px-8 md:px-9 rounded-[10px] 2xl:rounded-[11px] border-4 border-secondary"
+              >
+                Talk To Us
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -898,9 +904,15 @@
 
               <!-- Social Icons -->
               <div class="flex items-center gap-[22px]">
-                <img src="/images/facebook.svg" alt="facebook icon" />
-                <img src="/images/linkedin.svg" alt="linkedin icon" />
-                <img src="/images/instagram.svg" alt="instagram icon" />
+                <a href="#">
+                  <img src="/images/facebook.svg" alt="facebook icon" />
+                </a>
+                <a href="#">
+                  <img src="/images/linkedin.svg" alt="linkedin icon" />
+                </a>
+                <a href="#">
+                  <img src="/images/instagram.svg" alt="instagram icon" />
+                </a>
               </div>
             </div>
           </div>
@@ -911,70 +923,78 @@
           >
             <!-- Contact Form -->
             <form
-              action=""
+              id="contactForm"
               class="flex flex-col md:flex-row gap-8 md:gap-[68px] items-center"
             >
-              <!-- Left column with inputs -->
+              <!-- Left column: Contains input fields (Name, Email, Telephone) -->
               <div class="flex flex-col gap-0.5 w-full md:w-auto flex-1">
-                <!-- Name -->
+                <!-- Name Field -->
                 <div>
+                  <!-- Label -->
                   <p
                     class="pb-1 text-sm md:text-base lg:text-[19px] font-extrabold"
                   >
                     Name
                   </p>
+                  <!-- Input for Name -->
                   <input
                     type="text"
+                    id="name"
                     class="border-2 border-secondary rounded-[6px] h-[45px] px-4 text-sm md:text-[17px] w-full"
                   />
                 </div>
 
-                <!-- Email -->
+                <!-- Email Field -->
                 <div>
+                  <!-- Label -->
                   <p
                     class="pb-1 text-sm md:text-base lg:text-[19px] font-extrabold"
                   >
                     Email
                   </p>
+                  <!-- Input for Email -->
                   <input
                     type="email"
+                    id="email"
                     class="border-2 border-secondary rounded-[6px] h-[45px] px-4 text-sm md:text-[17px] w-full"
                   />
                 </div>
 
-                <!-- Telephone -->
+                <!-- Telephone Field -->
                 <div>
+                  <!-- Label -->
                   <p
                     class="pb-1 text-sm md:text-base lg:text-[19px] font-extrabold"
                   >
                     Telephone
                   </p>
+                  <!-- Input for Telephone -->
                   <input
-                    type="email"
+                    type="tel"
+                    id="telephone"
                     class="border-2 border-secondary rounded-[6px] h-[45px] px-4 text-sm md:text-[17px] w-full"
                   />
                 </div>
               </div>
 
-              <!-- Right column with textarea -->
+              <!-- Right column: Contains the message field and submit button -->
               <div class="flex-1 w-full">
-                <!-- Message Label -->
+                <!-- Message Field -->
                 <p
                   class="pb-1 text-sm md:text-base lg:text-[19px] font-extrabold"
                 >
                   Message
                 </p>
-                <!-- Textarea matching left height -->
                 <textarea
-                  name=""
-                  id=""
+                  id="message"
                   class="border-2 border-secondary rounded-[6px] py-3 px-4 text-sm md:text-[17px] min-h-[215px] w-full resize-none"
                 ></textarea>
 
-                <!-- Submit Button aligned to right -->
+                <!-- Submit Button aligned to the right -->
                 <div class="flex justify-end mt-3 md:-mb-[70px]">
                   <button
-                    class="bg-secondary text-primary font-extrabold text-sm sm:text-base 2xl:text-[19px] py-[10px] px-6 md:px-[37px] rounded-[9px]"
+                    type="submit"
+                    class="bg-secondary cursor-pointer text-primary font-extrabold text-sm sm:text-base 2xl:text-[19px] py-[10px] px-6 md:px-[37px] rounded-[9px]"
                   >
                     Submit
                   </button>
@@ -1089,5 +1109,6 @@
     </div>
 
     <script src="/JavaScript/Others.js"></script>
+    <script src="/JavaScript/form.js"></script>
   </body>
 </html>
