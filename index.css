@@ -3,9 +3,11 @@
 @theme {
   --color-primary: #240d4b;
   --color-secondary: #aee9b6;
-  --color-custom-purple: #41286c;
+  --color-customPurple: #41286c;
   --color-custom-span: #232323;
-
+  --radius-testimonial: 2.375rem;
+  --spacing-testimonialx: 57px;
+  --spacing-testimonialy: 68px;
   --font-family-sans: "HeroNew", sans-serif;
 }
 

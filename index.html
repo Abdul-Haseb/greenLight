@@ -301,7 +301,7 @@
 
         <!-- Right Side: 'See More Websites' button -->
         <button
-          class="bg-secondary md:flex md:items-center gap-1 rounded-[11px] whitespace-nowrap py-1.5 px-4 md:py-3 md:px-8 font-extrabold text-sm md:text-[19px] text-[#022221] sm:px-6 sm:py-2 md:px-8 md:py-3"
+          class="bg-secondary md:flex md:items-center gap-1 rounded-[11px] whitespace-nowrap py-1.5 px-4 md:py-3 md:px-8 font-extrabold text-sm md:text-[19px] text-[#022221] sm:px-6 sm:py-2"
         >
           <!-- On smaller screens just says "See More" -->
           See More
@@ -709,31 +709,37 @@
       ></div>
     </section>
 
-    <!-- What Our clients say -->
+    <!-- Section: What Our Clients Say -->
     <section
-      class="px-5 md:px-7 lg:px-10 2xl:px-[100px] max-w-[1920px] mx-auto"
+      class="px-5 md:px-7 lg:px-10 2xl:px-[100px] max-w-[1920px] mx-auto mb-[100px] md:mb-[120px] lg:mb-[165px] xl:mb-[214px]"
     >
-      <!-- Header Row: contains the "Our Websites" heading, scroll arrows, and 'See More Websites' button -->
-      <div class="flex items-center pb-[50px] md:pb-[70px] lg:pb-[109px]">
-        <!-- Left Side: heading and scroll arrows are grouped together -->
-        <div class="flex gap-2 items-center md:gap-5 w-full">
+      <!-- Top Header Row: Contains the heading, scroll arrows, and "Read More Reviews" button -->
+      <div
+        class="flex flex-col lg:flex-row items-start gap-4 lg:items-center lg:gap-0 pb-[26px] justify-between"
+      >
+        <!-- Left Side: Heading and scroll arrows -->
+        <div
+          class="flex gap-2 items-center md:gap-5 w-full lg:w-fit justify-between lg:justify-start"
+        >
           <!-- Main Section Title -->
           <h2
-            class="font-extrabold text-primary sm:text-[30px] md:text-[40px] 2xl:text-[70px]"
+            class="font-extrabold text-primary text-[22px] sm:text-[28px] md:text-[36px] lg:text-[50px] 2xl:text-[70px]"
           >
             What our clients say
           </h2>
 
-          <!-- Scroll Arrows: for navigating horizontally through website cards -->
+          <!-- Scroll Arrows for horizontal navigation -->
           <div class="flex items-center gap-2">
+            <!-- Left Scroll Arrow -->
             <img
-              id="scrollLeft"
+              id="testimonialScrollLeft"
               src="/images/iconLeft.svg"
               alt="Scroll Left"
               class="cursor-pointer w-[30px] sm:w-[35px] md:w-[40px]"
             />
+            <!-- Right Scroll Arrow -->
             <img
-              id="scrollRight"
+              id="testimonialScrollRight"
               src="/images/iconRight.svg"
               alt="Scroll Right"
               class="cursor-pointer w-[30px] sm:w-[35px] md:w-[40px]"
@@ -741,21 +747,217 @@
           </div>
         </div>
 
-        <!-- Right Side: 'See More Websites' button -->
+        <!-- Right Side: Button to read more testimonials -->
         <button
           class="bg-primary text-white md:flex md:items-center gap-1 rounded-[11px] whitespace-nowrap py-1.5 px-4 font-extrabold text-sm md:text-[19px] sm:px-4 sm:py-2 md:px-8 md:py-3"
         >
-          <!-- On smaller screens just says "See More" -->
+          <!-- Text on the button -->
           Read More Reviews
         </button>
       </div>
 
-      <!-- Scrollable Card Section: horizontally scrollable list of website cards -->
+      <!-- Horizontal Scrollable Container for Testimonial Cards -->
       <div
-        id="greenLightCards"
+        id="testimonialsCards"
         class="flex overflow-x-auto gap-[71px] px-4 scrollbar"
+      >
+        <!-- Testimonial cards will be inserted here dynamically using JavaScript -->
+      </div>
+    </section>
+
+    <!-- Follow us section -->
+    <section
+      class="px-5 md:px-7 lg:px-10 2xl:px-[100px] max-w-[1920px] mx-auto mb-[100px] md:mb-[120px] lg:mb-[150px] xl:mb-[186px]"
+    >
+      <!-- Header Row: contains the "Follow us on social media" heading and the social media icons -->
+      <div
+        class="flex flex-col md:flex-row items-start md:items-center gap-4 xl:gap-0"
+      >
+        <!-- Left Side: heading for the section -->
+        <div class="w-full">
+          <!-- Main Section Title -->
+          <h5
+            class="font-extrabold text-primary text-[22px] sm:text-[28px] md:text-[36px] lg:text-[50px] 2xl:text-[70px]"
+          >
+            Follow us on social media
+          </h5>
+        </div>
+
+        <!-- Right Side: social media icons (Facebook, LinkedIn, Instagram) -->
+        <div class="flex items-center gap-2">
+          <!-- Facebook Icon -->
+          <a href="#">
+            <img
+              src="/images/colorFB.svg"
+              alt=""
+              class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16"
+            />
+          </a>
+          <!-- LinkedIn Icon -->
+          <a href="#">
+            <img
+              src="/images/colorLI.svg"
+              alt=""
+              class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16"
+            />
+          </a>
+          <!-- Instagram Icon -->
+          <a href="#">
+            <img
+              src="/images/colorInsta.svg"
+              alt=""
+              class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- Scrollable Card Section: container that will hold dynamically generated cards using JavaScript -->
+      <div
+        id="followUsCards"
+        class="flex overflow-x-auto gap-[22px] scrollbar"
       ></div>
     </section>
+
+    <!-- Contact -->
+    <section class="bg-[#012221]">
+      <!-- Wrapper with horizontal and vertical padding -->
+      <div
+        class="max-w-[1920px] mx-auto pl-5 md:pl-7 lg:pl-10 2xl:pl-[100px] py-10 md:py-12 xl:py-[95px]"
+      >
+        <!-- Top-level flex layout for content and form -->
+        <div
+          class="flex flex-col lg:flex-row items-start md:items-center justify-between gap-10 lg:gap-0"
+        >
+          <!-- Left Content Area -->
+          <div class="w-full lg:max-w-[500px] px-4">
+            <!-- Section Title -->
+            <h6
+              class="font-extrabold text-secondary text-[22px] sm:text-[28px] md:text-[32px] lg:text-[40px] xl:text-[50px] 2xl:text-[70px] pb-1"
+            >
+              Let's talk
+            </h6>
+
+            <!-- Description Paragraphs -->
+            <p
+              class="max-w-[465px] text-sm sm:text-base md:text-[17px] text-white pb-2"
+            >
+              If you have any questions or would like to get started, get in
+              touch using our form and a member of our team will be in touch as
+              soon as possible.
+            </p>
+            <p
+              class="max-w-[465px] text-sm sm:text-base md:text-[17px] text-white"
+            >
+              Alternatively, you can reach us via:
+            </p>
+
+            <!-- Contact Info Section -->
+            <div
+              class="flex flex-col gap-[14px] text-white mt-3 text-sm md:text-base"
+            >
+              <!-- Email Row -->
+              <div class="flex items-center gap-1.5">
+                <img src="/images/mail.svg" alt="email icon" />
+                <span>info@greenlight-digital.co.uk</span>
+              </div>
+
+              <!-- Phone Row -->
+              <div class="flex items-center gap-1.5">
+                <img src="/images/phone.svg" alt="phone icon" />
+                <span>01234 567 890</span>
+              </div>
+
+              <!-- Social Icons -->
+              <div class="flex items-center gap-[22px]">
+                <img src="/images/facebook.svg" alt="facebook icon" />
+                <img src="/images/linkedin.svg" alt="linkedin icon" />
+                <img src="/images/instagram.svg" alt="instagram icon" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Form Container -->
+          <div
+            class="w-full border-3 border-r-0 border-secondary rounded-l-[40px] md:rounded-l-[67px] px-5 sm:px-[20px] pr-5 md:pl-7 lg:pr-10 2xl:pr-[100px] pt-10 md:pt-[74px] pb-[74px] md:pb-[111px] text-white max-w-[1200px]"
+          >
+            <!-- Contact Form -->
+            <form
+              action=""
+              class="flex flex-col md:flex-row gap-8 md:gap-[68px] items-center"
+            >
+              <!-- Left column with inputs -->
+              <div class="flex flex-col gap-0.5 w-full md:w-auto flex-1">
+                <!-- Name -->
+                <div>
+                  <p
+                    class="pb-1 text-sm md:text-base lg:text-[19px] font-extrabold"
+                  >
+                    Name
+                  </p>
+                  <input
+                    type="text"
+                    class="border-2 border-secondary rounded-[6px] h-[45px] px-4 text-sm md:text-[17px] w-full"
+                  />
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <p
+                    class="pb-1 text-sm md:text-base lg:text-[19px] font-extrabold"
+                  >
+                    Email
+                  </p>
+                  <input
+                    type="email"
+                    class="border-2 border-secondary rounded-[6px] h-[45px] px-4 text-sm md:text-[17px] w-full"
+                  />
+                </div>
+
+                <!-- Telephone -->
+                <div>
+                  <p
+                    class="pb-1 text-sm md:text-base lg:text-[19px] font-extrabold"
+                  >
+                    Telephone
+                  </p>
+                  <input
+                    type="email"
+                    class="border-2 border-secondary rounded-[6px] h-[45px] px-4 text-sm md:text-[17px] w-full"
+                  />
+                </div>
+              </div>
+
+              <!-- Right column with textarea -->
+              <div class="flex-1 w-full">
+                <!-- Message Label -->
+                <p
+                  class="pb-1 text-sm md:text-base lg:text-[19px] font-extrabold"
+                >
+                  Message
+                </p>
+                <!-- Textarea matching left height -->
+                <textarea
+                  name=""
+                  id=""
+                  class="border-2 border-secondary rounded-[6px] py-3 px-4 text-sm md:text-[17px] min-h-[215px] w-full resize-none"
+                ></textarea>
+
+                <!-- Submit Button aligned to right -->
+                <div class="flex justify-end mt-3 md:-mb-[70px]">
+                  <button
+                    class="bg-secondary text-primary font-extrabold text-sm sm:text-base 2xl:text-[19px] py-[10px] px-6 md:px-[37px] rounded-[9px]"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="/JavaScript/Others.js"></script>
   </body>
 </html>
