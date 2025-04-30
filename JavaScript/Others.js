@@ -1,6 +1,7 @@
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const closeBtn = document.getElementById("close-btn");
+const mobileLinks = document.querySelectorAll(".mobile-link");
 
 menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
@@ -9,6 +10,12 @@ menuBtn.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
+});
+
+mobileLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden"); // Always hide when link is clicked
+  });
 });
 
 const cardData = [
@@ -201,14 +208,15 @@ function createCard({ title, description, image, rating }, type = "website") {
     `;
   } else if (type === "followUs") {
     cardElement.className = `
-      w-[310px] sm:w-[350px]  md:w-[410px] h-auto
+      w-[310px] sm:w-[360px]  md:w-[410px] md:h-[410px]
       bg-white
       mx-auto
       flex-shrink-0
       rounded-xl
+
     `;
     cardElement.innerHTML = `
-      <img src="${image}" alt="${title}" class="w-full md:h-[368px] object-cover rounded-[19px] overflow-hidden bg-primary mb-4 " />
+      <img src="${image}" alt="${title}" class="w-full h-full  object-cover rounded-[19px] bg-primary mb-4 " />
     `;
   } else {
     cardElement.className = `
